@@ -1,0 +1,275 @@
+:root {
+  --indent: 20px;
+  --items: 1;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+===========================
+Socials icons section start
+===========================
+*/
+.wrapper {
+  margin-bottom: 100px;
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+
+  background-color: bisque;
+  border-radius: 10px;
+}
+
+.socials-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials-item {
+  margin-right: 10px;
+}
+
+.socials-item:last-child {
+  margin-right: 0;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  color: #afb1b8;
+  border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.socials-icon {
+  /* fill: #afb1b8; */
+  fill: currentColor;
+}
+
+/* .socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: #ffffff;
+} */
+
+/*
+===========================
+ Socials icons section end
+===========================
+*/
+
+/*
+========================
+  Clients section start
+========================
+*/
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 100px;
+}
+
+.clients-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  /* gap: 30px; */
+  margin: -15px;
+}
+
+.clients-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 15px;
+  width: 170px;
+  height: 92px;
+
+  /* filter: grayscale(90%); */
+
+  border: 1px solid #afb1b8;
+  color: #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-item:hover {
+  /* filter: grayscale(0); */
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.clients-icon {
+  fill: currentColor;
+}
+/*
+======================
+  Clients section end
+======================
+*/
+
+/*
+====================
+  Grid layout start
+====================
+*/
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--indent);
+}
+
+.grid-item {
+  /*
+    ============================
+    Розрахунок розміру елемента
+    ============================
+  */
+  flex-basis: calc((100% - 20px * 3) / 4);
+
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  /* ==================== */
+
+  min-height: 270px;
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: darkorange;
+}
+
+.team-list {
+  --items: 3;
+}
+.products-list {
+  --items: 5;
+}
+/*
+==================
+  Grid layout end
+==================
+*/
+
+/*
+====================
+  Form styles start
+====================
+*/
+.form {
+  width: 528px;
+  padding: 40px;
+
+  background-color: #afb1b8;
+  border-radius: 20px;
+}
+
+.form-title {
+  display: block;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form-label {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-tag {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.form-input {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 42px;
+  padding-right: 16px;
+  border: 1px solid #2196f3;
+  border-radius: 8px;
+  background-color: transparent;
+  outline: transparent;
+
+  transition: border 300ms;
+}
+
+/* .form-input:placeholder-shown + .form-icon {
+    fill: hotpink;
+  } */
+
+.form-input:hover,
+.form-input:focus,
+.form-input:not(:placeholder-shown) {
+  border-color: green;
+}
+
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon,
+.form-input:not(:placeholder-shown) + .form-icon {
+  fill: green;
+}
+
+.form-icon {
+  position: absolute;
+  top: 35px;
+  left: 12px;
+  fill: #ffffff;
+
+  transition: fill 300ms;
+}
+
+.form-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 15px;
+  border: 2px solid #2196f3;
+
+  color: white;
+  background-color: transparent;
+  border-radius: 15px;
+  cursor: pointer;
+}
+/*
+=================
+ Form styles end
+=================
+*/
